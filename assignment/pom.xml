@@ -40,8 +40,8 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.DB_USERNAMEql</groupId>
-			<artifactId>DB_USERNAMEql</artifactId>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
