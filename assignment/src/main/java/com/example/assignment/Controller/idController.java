@@ -17,7 +17,7 @@ import java.util.Map;
 @AllArgsConstructor
 public class idController {
 
-    private idService iservice;
+    private final idService iservice;
 
     @PostMapping("/identify")
     public ResponseEntity<Map<String, contactResponseDto>> identify(@RequestBody contactRequestDto request) {
