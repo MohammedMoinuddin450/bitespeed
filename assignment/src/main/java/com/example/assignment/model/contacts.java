@@ -22,16 +22,22 @@ public class contacts {
     @Enumerated(EnumType.STRING)
     private LinkPrecedence linkPrecedence;
 
+    private LocalDateTime createdAt;
     @PrePersist
     protected void onCreate(){
-        LocalDateTime createdAt=LocalDateTime.now();
+        this.createdAt=LocalDateTime.now();
     }
 
+    private LocalDateTime updatedAt;
     @PreUpdate
     protected void onUpdate(){
-        LocalDateTime updatedAt = LocalDateTime.now();
+        this.updatedAt = LocalDateTime.now();
     }
 
     private LocalDateTime deletedAt;
+    @PreRemove
+    public void setDeletionTimestamp() {
+        this.deletedAt = LocalDateTime.now();
+    }
 
 }
